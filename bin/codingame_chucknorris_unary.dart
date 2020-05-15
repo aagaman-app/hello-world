@@ -7,8 +7,7 @@ void main() {
   String MESSAGE = stdin.readLineSync();
 
   List<int> codeunits = MESSAGE.codeUnits;
-  // stderr.writeln(codeunits);
-  // stderr.writeln('$MESSAGE : $codeunits');
+
   List<String> binary = [];
 
   for (int codeunit in codeunits) {
@@ -19,7 +18,6 @@ void main() {
       remainder = q % 2;
       q = q ~/ 2;
       bitNumbers.add(remainder);
-      // stderr.writeln('q: ${q}, remainder: $remainder');
     }
     if (bitNumbers.length < 7) {
       for (int i = 0; i < 7 - bitNumbers.length; i++) {
@@ -32,10 +30,9 @@ void main() {
   }
 
   String bin = binary.join();
-  // stderr.writeln(bin);
 
   String answer;
-  // stderr.writeln(bin.length);
+
   String id;
   String count;
   for (int i = 0; i < bin.length; i++) {
@@ -54,10 +51,6 @@ void main() {
         answer = i == bin.length - 1 ? '$answer $id $count' : answer;
       }
     }
-    // stderr.writeln('Step:$i: $answer');
-    // stderr.writeln('${bin[i]}: $id : $count');
-
-    // stderr.writeln('$id-$count = $answer');
   }
 
   print(answer);
