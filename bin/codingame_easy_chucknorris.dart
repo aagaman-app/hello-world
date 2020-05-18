@@ -1,7 +1,6 @@
 //https://www.codingame.com/training/easy/chuck-norris
 
 import 'dart:io';
-import 'dart:math';
 
 void main() {
   String MESSAGE = stdin.readLineSync();
